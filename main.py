@@ -100,6 +100,11 @@ def listar_transacoes():
         for r in rows
     ]
 
+@app.get("/status")
+def status():
+    return {"status": "API financeira ativa"}
+
+
 
 
 
