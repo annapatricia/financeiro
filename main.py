@@ -4,7 +4,9 @@ import sqlite3
 from pathlib import Path
 
 #Banco de dados
-DB_PATH = Path("financeiro.db")
+#DB_PATH = Path("financeiro.db")
+BASE_DIR = Path(__file__).resolve().parent
+DB_PATH = BASE_DIR / "financeiro.db"
 
 conn = sqlite3.connect(DB_PATH, check_same_thread=False)
 cursor = conn.cursor()
